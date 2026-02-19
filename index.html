@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Notification Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="top-nav" aria-label="Primary navigation">
+    <a href="/" data-route="/" class="brand">Job Notification Tracker</a>
+
+    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+      aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="site-nav" class="nav-links" aria-label="Job Notification Tracker sections">
+      <a href="/dashboard" data-route="/dashboard">Dashboard</a>
+      <a href="/saved" data-route="/saved">Saved</a>
+      <a href="/digest" data-route="/digest">Digest</a>
+      <a href="/settings.html" data-route="/settings">Settings</a>
+      <a href="/proof" data-route="/proof">Proof</a>
+      <a href="/jt/07-test" data-route="/jt/07-test">Test</a>
+      <a href="/jt/08-ship" data-route="/jt/08-ship" id="ship-link">Ship</a>
+    </nav>
+  </header>
+
+  <main class="route-shell" aria-live="polite">
+    <section class="route-placeholder" id="route-content"></section>
+  </main>
+
+  <div id="modal-container" class="modal-container" style="display: none;">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="jobs.js"></script>
+</body>
+
+</html>
